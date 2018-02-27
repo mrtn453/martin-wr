@@ -166,6 +166,20 @@ footer {
   padding: 9px 10px !important;
 }
 
+.social-logos {
+  color: white;
+  font-size: 28px;
+}
+
+.social-logos:hover {
+  font-size: 36px;
+  -webkit-transition: all 0.35s ease;
+  -moz-transition: all 0.35s ease;
+  -o-transition: all 0.35s ease;
+  -ms-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+
 @media (max-width: 991px) {
   #avatar {margin-bottom: 40px;}
 }

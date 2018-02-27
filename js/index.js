@@ -45,7 +45,6 @@ $(document).ready(function() {
 
 function onScrollHandle(){
   var currentScrollPos = $(document).scrollTop() + 90;
-  console.log(currentScrollPos);
   $("#myNavbar > div > a").each(function () {
     var curLink = $(this);
     var refElem = $(curLink.attr('href'));

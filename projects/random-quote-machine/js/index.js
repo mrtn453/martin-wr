@@ -4,17 +4,17 @@ var i = 0;
 var quotes = [];
 
 $.ajaxSetup({
-    "error":function() { alert("Could not retrieve a new quote. Please check your internet connection.");},
-    cache: false
-});
+  cache: false,
+})
 
 function getNewQuote(id, success){
   return $.getJSON("https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1",
     function(quote){
       quotes.push(quote[0]);
       setQuote(id);
-      if(success !== undefined) success();
-  });
+  })
+  .done(function(){ if(success !== undefined) success(); })
+  .fail(function(){ alert("Could not retrieve a new quote. Please check your internet connection.") });
 }
 
 function setQuote(id){
@@ -45,7 +45,7 @@ $(document).ready(function(){
 
     if(event.detail == 1){
       if(i >= quotes.length - 1){
-        getNewQuote(i + 1, success());
+        getNewQuote(i + 1, success);
       } else {
         setQuote(i + 1);
         success();
