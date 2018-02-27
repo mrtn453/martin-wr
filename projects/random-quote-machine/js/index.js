@@ -14,7 +14,8 @@ function getNewQuote(id, success){
       setQuote(id);
   })
   .done(function(){ if(success !== undefined) success(); })
-  .fail(function(){ alert("Could not retrieve a new quote. Please check your internet connection.") });
+  .fail(function(){ //alert("Could not retrieve a new quote. Please check your internet connection.")
+});
 }
 
 function setQuote(id){

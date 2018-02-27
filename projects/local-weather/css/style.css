@@ -14,6 +14,35 @@ p {
   font-size: 22px;
 }
 
+/* Footer */
+html, body {
+  height: 100%;
+} #wrapper{
+  min-height:100%;
+  position:relative;
+} footer {
+  width: 100%;
+  height: 42px;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.45);
+  font-family: Lato, sans-serif;
+  font-size: 15px;
+} footer a {
+  line-height: 42px;
+  color: white;
+  text-decoration: none;
+} footer a:focus, footer a:hover, footer a:visited {
+  text-decoration: none;
+  color: white;
+} footer span {
+  vertical-align: middle;
+} .i-big {
+  vertical-align: middle;
+  font-size: 18px;
+}
+
 /* Header */
 #time-now {
   float: right;
