@@ -30,7 +30,6 @@ function setQuote(id){
 
 function changeBackground(id){
   var html = document.getElementsByTagName('html')[0];
-  console.log(id);
   html.style.setProperty("--main-color", colorsRYB[quotes[id]["ID"] % colorsRYB.length]);
 }
 
