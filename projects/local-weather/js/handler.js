@@ -1,11 +1,11 @@
 function currentWeatherReq(lat, long){
-  return "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon="
-    + long + "&units=imperial" + "&APPID=" + API_KEY;
+  return "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" +
+    long + "&units=imperial" + "&APPID=" + API_KEY;
 }
 
 function forecastReq(lat, long){
-  return "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon="
-    + long + "&units=imperial" + "&APPID=" + API_KEY;
+  return "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" +
+    long + "&units=imperial" + "&APPID=" + API_KEY;
 }
 
 function handleCurrentWeather(lat, long) {
@@ -21,7 +21,7 @@ function handleCurrentWeather(lat, long) {
       sunrise: json.sys.sunrise,
       sunset: json.sys.sunset,
       country: json.sys.country
-    }
+    };
   })
   .done(() => setCurrentWeather())
   .fail((jqHXR, exception) => handleRequestError(jqXHR, exception));
@@ -38,7 +38,7 @@ function handleForecast(lat, long){
       date = new Date(weather.dt * 1000);
       if(today != date.getDay()){
         if(weekdayStr != weekday_[date.getDay()] && weekdayStr != ""){
-          forecast.push({ weekday: weekdayStr, min: tempMin, max: tempMax})
+          forecast.push({ weekday: weekdayStr, min: tempMin, max: tempMax});
           tempMin = Number.POSITIVE_INFINITY;
           tempMax = Number.NEGATIVE_INFINITY;
         }

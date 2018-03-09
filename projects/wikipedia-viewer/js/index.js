@@ -8,7 +8,7 @@ $(document).ready(function(){
 function getApiCall(search, offset = 0){
   offset *= 10;
   search = encodeURIComponent(search.trim());
-  return "https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&generator=search&utf8=1&formatversion=2&exsentences=4&exlimit=max&exintro=1&explaintext=1&gsrsearch=" + search + "&gsrnamespace=0&gsrlimit=10&gsroffset=" + offset + "&gsrprop=snippet&callback=?"
+  return "https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&generator=search&utf8=1&formatversion=2&exsentences=4&exlimit=max&exintro=1&explaintext=1&gsrsearch=" + search + "&gsrnamespace=0&gsrlimit=10&gsroffset=" + offset + "&gsrprop=snippet&callback=?";
 }
 
 function handleRequest(form){
@@ -55,7 +55,7 @@ function getArticles(req, callback, callback_error = {}){
       });
       callback(articles);
     }
-  }).fail(function(){ alert("Error")});
+  }).fail(function(){ alert("Error"); });
 }
 
 function getCard(pageid, title, snippet){
@@ -74,7 +74,7 @@ function getCard(pageid, title, snippet){
 }
 
 function addArticles(articles){
-  var main = $(`<div class="card-columns"></div>`)
+  var main = $(`<div class="card-columns"></div>`);
   for(var i = 0; i < articles.length; ++i){
     var card = getCard(articles[i].id, articles[i].title, articles[i].extract);
     main.append(card);

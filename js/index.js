@@ -49,15 +49,15 @@ function onScrollHandle(){
     var curLink = $(this);
     var refElem = $(curLink.attr('href'));
 
-    if($(window).scrollTop() + $(window).height() == $(document).height()
-      && $(this).attr("id") === "id_contact"){
+    if ($(window).scrollTop() + $(window).height() == $(document).height() &&
+        $(this).attr("id") === "id_contact"){
       $("#myNavbar > div > a").removeClass("active");
       curLink.addClass("active");
     }
 
     var yPadding = parseInt(refElem.css("padding-top")) + parseInt(refElem.css("padding-bottom"));
-    if (refElem.position().top -1 <= currentScrollPos
-      && refElem.position().top + refElem.height() + (yPadding - 2) > currentScrollPos) {
+    if (refElem.position().top -1 <= currentScrollPos &&
+        refElem.position().top + refElem.height() + (yPadding - 2) > currentScrollPos) {
       $("#myNavbar > div > a").removeClass("active");
       curLink.addClass("active");
     }

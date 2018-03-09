@@ -5,7 +5,7 @@ var quotes = [];
 
 $.ajaxSetup({
   cache: false,
-})
+});
 
 function getNewQuote(id, success){
   return $.getJSON("https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1",
@@ -30,7 +30,7 @@ function setQuote(id){
 
 function changeBackground(id){
   var html = document.getElementsByTagName('html')[0];
-  html.style.setProperty("--main-color", colorsRYB[quotes[id]["ID"] % colorsRYB.length]);
+  html.style.setProperty("--main-color", colorsRYB[quotes[id].ID % colorsRYB.length]);
 }
 
 $(document).ready(function(){
@@ -77,5 +77,5 @@ $(document).ready(function(){
     postTitle += "\n- " + author;
     window.open("https://twitter.com/intent/tweet?text=" + encodeURIComponent(postTitle),
     "twitterwindow", height=450, width=550, toolbar=0, menubar=0, directories=0, scrollbars=0);
-  })
+  });
 });
