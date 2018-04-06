@@ -56,20 +56,23 @@ $(document).ready(function() {
 
 function onScrollHandle(){
   var currentScrollPos = $(document).scrollTop() + 90;
-  $("#myNavbar > div > a").each(function () {
+  const links = $("#myNavbar > div > a");
+  links.each(function () {
     var curLink = $(this);
     var refElem = $(curLink.attr('href'));
 
     if ($(window).scrollTop() + $(window).height() == $(document).height() &&
         $(this).attr("id") === "id_contact"){
-      $("#myNavbar > div > a").removeClass("active");
+      links.removeClass("active");
       curLink.addClass("active");
     }
 
     var yPadding = parseInt(refElem.css("padding-top")) + parseInt(refElem.css("padding-bottom"));
     if (refElem.position().top -1 <= currentScrollPos &&
-        refElem.position().top + refElem.height() + (yPadding - 2) > currentScrollPos) {
-      $("#myNavbar > div > a").removeClass("active");
+        refElem.position().top + refElem.height() + (yPadding - 2) > currentScrollPos &&
+        links.hasClass("active")) {
+      links.removeClass("active");
+      links.blur();
       curLink.addClass("active");
     }
   });
