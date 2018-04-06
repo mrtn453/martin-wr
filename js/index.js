@@ -1,3 +1,5 @@
+const MY_MAIL = "martin.wrod@googlemail.com"
+
 function checkAnim() {
   var windowHeight = jQuery(window).height();
   $(".animate-img").each(function(){
@@ -8,6 +10,15 @@ function checkAnim() {
         $(this).css("visibility", "visible");
         $(this).addClass("fadeInUp");
     }
+  });
+
+  $('#contact-form').submit(function(e) {
+    let name = $('#inputName').val();
+    let subject = $('#inputSubject').val();
+    let msg = $('#inputArea').val();
+    console.log(name, MY_MAIL, msg);
+    document.location = "mailto:"+MY_MAIL+"?subject="+subject+"&body="+msg;
+    e.preventDefault();
   });
 }
 
