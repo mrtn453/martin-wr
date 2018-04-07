@@ -36,10 +36,14 @@ body {
 }
 
 .navbar-brand {
-  color: var(--text-sector-2) !important;
-  padding: 0 15px;
-  height: 90px;
+  padding: 0 5px;
   line-height: 90px;
+}
+
+.navbar-toggle {
+  /* (80px - button height 34px) / 2 = 23px */
+  margin-top: 28px;
+  padding: 9px 10px !important;
 }
 
 footer {
@@ -285,12 +289,12 @@ footer {
 /* Footer */
 
 .footer-row {
-  height: 70px; 
-  margin-bottom: 10px;
+  margin-top: 15px;
+  margin-bottom: 35px;
 }
 
 .footer-row a {
-  padding: 15px;
+  padding: 30px;
 }
 
 .social-logos {
@@ -299,12 +303,9 @@ footer {
 }
 
 .social-logos:hover {
-  font-size: 36px;
-  -webkit-transition: all 0.35s ease;
-  -moz-transition: all 0.35s ease;
-  -o-transition: all 0.35s ease;
-  -ms-transition: all 0.35s ease;
   transition: all 0.35s ease;
+  color: var(--bg-color-1);
+  transform: scale(1.5);
 }
 
 /* Media queries */
@@ -318,7 +319,7 @@ footer {
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .display-3-header {
     font-size: 26px;
   }
@@ -333,11 +334,27 @@ footer {
   }
 }
 
-@media only screen and (max-width: 576px) {
+@media (min-width: 768px) {
+  .navbar-nav > a {
+    /*padding-top: 31.5px;
+    padding-bottom: 31.5px;*/
+    line-height: 32px;
+  }
+}
+
+@media (max-width: 576px) {
   .display-3-header {
     font-size: 24px;
   }
   .display-3-text {
     font-size: 22px;
+  }
+
+  #logo-mw {
+    margin-left: 25px;
+  }
+
+  .navbar-toggler {
+    margin-right: 25px;
   }
 }
