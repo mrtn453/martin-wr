@@ -52,6 +52,16 @@ $(document).ready(function() {
       });
     } // End if
   });
+
+  $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+    event.preventDefault();
+    $(this).ekkoLightbox({
+      alwaysShowClose: true,
+      leftArrow: '<span style="color: rgba(0, 0, 0, 0.65)">&#10094;</span>',
+      rightArrow: '<span style="color: rgba(0, 0, 0, 0.65)">&#10095;</span>',
+    });
+  });
+
 });
 
 function onScrollHandle(){

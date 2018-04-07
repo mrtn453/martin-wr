@@ -5,16 +5,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- for FF, Chrome, Opera -->
+  <!-- Icon for FF, Chrome, Opera -->
   <link rel="icon" type="image/png" href="/assets/favicons/favicon-16x16.png" sizes="16x16">
   <link rel="icon" type="image/png" href="/assets/favicons/favicon-32x32.png" sizes="32x32">
 
-  <!-- for IE -->
+  <!-- Icon for IE -->
   <link rel="icon" type="image/x-icon" href="/assets/favicons/favicon.ico" >
   <link rel="shortcut icon" type="image/x-icon" href="/assets/favicons/favicon.ico"/>
 
+  <!-- Animate -->
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+
+  <!-- Bootstrap -->
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css'>
+
+  <!-- Ekko Lightbox -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" integrity="sha256-HAaDW5o2+LelybUhfuk0Zh2Vdk8Y2W2UeKmbaXhalfA=" crossorigin="anonymous" />
+  
   <link rel="stylesheet" href="css/style.css" />
   <title>Martin Wrodarczyk</title>
 </head>
@@ -74,22 +81,22 @@
       </div>
       <div class="row">
         <div class="col-12 col-sm-6 col-lg-3 my-3">
-          <a href="assets/img/show_tracker/watchlist_stream.png">
+          <a href="assets/img/show_tracker/watchlist_stream.png" data-toggle="lightbox" data-gallery="showtracker-gallery">
             <img class="img-fluid animated animate-img" src="assets/img/show_tracker/watchlist_stream.png" alt="Watchlist">
           </a>
         </div>
         <div class="col-12 col-sm-6 col-lg-3 my-3">
-          <a href="assets/img/show_tracker/upcoming_stream.png">
+          <a href="assets/img/show_tracker/upcoming_stream.png" data-toggle="lightbox" data-gallery="showtracker-gallery">
             <img class="img-fluid animated animate-img" src="assets/img/show_tracker/upcoming_stream.png" alt="Upcoming Episodes">
           </a>
         </div>
         <div class="col-12 col-sm-6 col-lg-3 my-3">
-          <a href="assets/img/show_tracker/show_content.png">
+          <a href="assets/img/show_tracker/show_content.png" data-toggle="lightbox" data-gallery="showtracker-gallery">
             <img class="img-fluid animated animate-img" src="assets/img/show_tracker/show_content.png" alt="Content of TV Shows">
           </a>
         </div>
         <div class="col-12 col-sm-6 col-lg-3 my-3">
-          <a href="assets/img/show_tracker/show_content_episodes.png">
+          <a href="assets/img/show_tracker/show_content_episodes.png" data-toggle="lightbox" data-gallery="showtracker-gallery">
             <img class="img-fluid animated animate-img" src="assets/img/show_tracker/show_content_episodes.png" alt="Episodes">
           </a>
         </div>
@@ -102,22 +109,22 @@
       </div>
       <div class="row pb-3">
         <div class="col-12 col-sm-6 col-lg-3 my-3">
-          <a href="assets/img/bachelor/konversation.png">
+          <a href="assets/img/bachelor/konversation.png" data-toggle="lightbox" data-gallery="bachelor-gallery">
             <img class="img-fluid animated animate-img" src="assets/img/bachelor/konversation.png" alt="Watchlist">
           </a>
         </div>
         <div class="col-12 col-sm-6 col-lg-3 my-3">
-          <a href="assets/img/bachelor/konversationsuebersicht.png">
+          <a href="assets/img/bachelor/konversationsuebersicht.png" data-toggle="lightbox" data-gallery="bachelor-gallery">
             <img class="img-fluid animated animate-img" src="assets/img/bachelor/konversationsuebersicht.png" alt="Upcoming Episodes">
           </a>
         </div>
         <div class="col-12 col-sm-6 col-lg-3 my-3">
-          <a href="assets/img/bachelor/profil.png">
+          <a href="assets/img/bachelor/profil.png" data-toggle="lightbox" data-gallery="bachelor-gallery">
             <img class="img-fluid animated animate-img" src="assets/img/bachelor/profil.png" alt="Content of TV Shows">
           </a>
         </div>
         <div class="col-12 col-sm-6 col-lg-3 my-3">
-          <a href="assets/img/bachelor/profilbearbeitung.png">
+          <a href="assets/img/bachelor/profilbearbeitung.png" data-toggle="lightbox" data-gallery="bachelor-gallery">
             <img class="img-fluid animated animate-img" src="assets/img/bachelor/profilbearbeitung.png" alt="Episodes">
           </a>
         </div>
@@ -439,13 +446,18 @@
     </p>
   </footer>
 
-
   <!-- Bootstrap needs to define these scripts here -->
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <!-- Ekko Lightbox -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js" integrity="sha256-Y1rRlwTzT5K5hhCBfAFWABD4cU13QGuRN6P5apfWzVs=" crossorigin="anonymous"></script>
+
+  <!-- Font Awesome -->
   <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/brands.js" integrity="sha384-qJKAzpOXfvmSjzbmsEtlYziSrpVjh5ROPNqb8UZ60myWy7rjTObnarseSKotmJIx" crossorigin="anonymous"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/fontawesome.js" integrity="sha384-2IUdwouOFWauLdwTuAyHeMMRFfeyy4vqYNjodih+28v2ReC+8j+sLF9cK339k5hY" crossorigin="anonymous"></script>
+
   <script src="js/index.js"></script>
 </body>
 
