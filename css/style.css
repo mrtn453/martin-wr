@@ -191,35 +191,40 @@ footer {
   border-radius: 0.25rem;
   margin-right: 5px;
   margin-bottom: 5px;
+  color: white;
+}
+
+.badge-postgresql {
+  background-color: #305F86;
+}
+
+.badge-react {
+  background-color: #60D6F9;
 }
 
 .badge-bootstrap {
   background-color: #5e2eb8;
-  color: white;
 }
 
 .badge-materialize {
   background-color: #E4666D;
-  color: white;
 }
 
 .badge-angular {
   background-color: #D40029;
-  color: white;
 }
 
 .badge-mongo {
   background-color: #6BB04A;
-  color: white;
 }
 
 .badge-nodejs {
   background-color: #417B3D;
-  color: white;
 }
 
 .badge-express {
   background-color: #ECECEC;
+  color: black;
 }
 
 /* Technology */
