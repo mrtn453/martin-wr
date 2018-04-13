@@ -1,4 +1,26 @@
 const MY_MAIL = "martin.wrod@googlemail.com"
+var scrollHandle = true;
+
+$(document).ready(function() {
+  // lazy load images
+  [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+    img.setAttribute('src', img.getAttribute('data-src'));
+    img.onload = function() {
+      img.removeAttribute('data-src');
+    };
+  });
+
+  // animate images if scrolled to them
+  checkAnim();
+  styleNav();
+  onScrollHandle();
+});
+
+// animate images on scroll over them
+$(window).scroll(function() {
+  checkAnim();
+  if(scrollHandle) onScrollHandle();
+});
 
 function checkAnim() {
   var windowHeight = jQuery(window).height();
@@ -11,57 +33,48 @@ function checkAnim() {
         $(this).addClass("fadeInUp");
     }
   });
+}
 
-  $('#contact-form').submit(function(e) {
-    let name = $('#inputName').val();
-    let subject = $('#inputSubject').val();
-    let msg = $('#inputArea').val();
-    console.log(name, MY_MAIL, msg);
-    document.location = "mailto:"+MY_MAIL+"?subject="+subject+"&body="+msg;
-    e.preventDefault();
+function styleNav(){
+  // change active state at nat on click
+  $(".nav-item").on("click", function(){
+    $(this).parent().find(".active").removeClass("active");
+    $(this).addClass("active");
   });
 }
 
-var scrollHandle = true;
-
-$(document).ready(function() {
-  checkAnim();
-  styleNav();
-  onScrollHandle();
-
-  // anim images
-  $(window).scroll(function() {
-      checkAnim();
-      if(scrollHandle) onScrollHandle();
+// image preview box
+$(document).on('click', '[data-toggle="lightbox"]', function(event) {
+  event.preventDefault();
+  $(this).ekkoLightbox({
+    alwaysShowClose: true,
+    leftArrow: '<span style="color: rgba(0, 0, 0, 0.65)">&#10094;</span>',
+    rightArrow: '<span style="color: rgba(0, 0, 0, 0.65)">&#10095;</span>',
   });
+});
 
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
+// contact form submit
+$('#contact-form').submit(function(e) {
+  let name = $('#inputName').val();
+  let subject = $('#inputSubject').val();
+  let msg = $('#inputArea').val();
+  console.log(name, MY_MAIL, msg);
+  document.location = "mailto:"+MY_MAIL+"?subject="+subject+"&body="+msg;
+  e.preventDefault();
+});
 
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      scrollHandle = false;
-      $('html, body').animate({
-        scrollTop: $(this.hash).offset().top - 90
-      }, 800, function() {
-        scrollHandle = true;
-      });
-    } // End if
-  });
-
-  $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+// Add smooth scrolling to all links
+$("a").on('click', function(event) {
+  if (this.hash !== "") {
     event.preventDefault();
-    $(this).ekkoLightbox({
-      alwaysShowClose: true,
-      leftArrow: '<span style="color: rgba(0, 0, 0, 0.65)">&#10094;</span>',
-      rightArrow: '<span style="color: rgba(0, 0, 0, 0.65)">&#10095;</span>',
-    });
-  });
 
+    scrollHandle = false;
+    $('html, body').animate({
+      scrollTop: $(this.hash).offset().top - 90
+    }, 800, function() {
+      scrollHandle = true;
+    });
+  }
 });
 
 function onScrollHandle(){
@@ -85,13 +98,5 @@ function onScrollHandle(){
       links.blur();
       curLink.addClass("active");
     }
-  });
-}
-
-function styleNav(){
-  // change active state at nat on click
-  $(".nav-item").on("click", function(){
-    $(this).parent().find(".active").removeClass("active");
-    $(this).addClass("active");
   });
 }
