@@ -36,8 +36,8 @@
       <div class="navbar-collapse collapse text-center" id="myNavbar">
         <div class="navbar-nav ml-auto">
           <a class="nav-item nav-link active" href="#home">HOME</a>
-          <a class="nav-item nav-link" href="#work">WORK</a>
-          <a class="nav-item nav-link" href="#portfolio">PORTFOLIO</a>
+          <a class="nav-item nav-link" href="#android">ANDROID</a>
+          <a class="nav-item nav-link" href="#web">WEB</a>
           <a class="nav-item nav-link" href="#technology">TECHNOLOGY</a>
           <a class="nav-item nav-link" href="#education">EDUCATION</a>
           <a id="id_contact" class="nav-item nav-link" href="#contact">CONTACT</a>
@@ -49,7 +49,7 @@
   <!-- HOME -->
 
   <header id="home" class="sector-2">
-    <div class="container jumbotron" style="background-color: white; border: 1px solid rgba(0, 0, 0, 0.1)">
+    <div class="container mx-auto jumbotron home-card">
     <div class="row my-auto justify-content-center text-center">
       <div id="avatar_col" class="col-12 col-lg-4 my-auto mx-auto">
         <img id="avatar" class="img-fluid" data-src="assets/img/misc/profilbild.png" alt="Avatar">
@@ -63,10 +63,10 @@
   </div>
   </header>
 
-  <!-- WORK -->
-  <section id="work" class="container-fluid sector-1">
+  <!-- ANDROID -->
+  <section id="android" class="container-fluid sector-1">
     <div class="container">
-      <h2 class="header-text-1">WORK</h2>
+      <h2 class="header-text-1">Android Applications</h2>
 
       <!-- Show Tracker 2 -->
       <div>
@@ -130,10 +130,10 @@
     </div>
   </section>
 
-  <!-- PORTFOLIO -->
-  <section class="container-fluid sector-2" id="portfolio">
+  <!-- WEB APPLICATIONS -->
+  <section class="container-fluid sector-2" id="web">
     <div class="container">
-      <h2 class="header-text-2">PORTFOLIO</h2>
+      <h2 class="header-text-2">Web Applications</h2>
 
       <h3 class="display-3 display-3-header mb-5">Advanced</h3>
       <div class="row justify-content-center">
@@ -325,8 +325,14 @@
         </div>
         <div class="col-auto">
           <div class="card card-technology">
-            <img class="card-technology-logos" data-src="assets/img/logos/cuda.jpg" alt="CUDA Logo">
-            <p class="technology-logos-text">CUDA</p>
+            <img class="card-technology-logos" data-src="assets/img/logos/opencl.png" alt="OpenCL Logo">
+            <p class="technology-logos-text">OpenCL</p>
+          </div>
+        </div>
+        <div class="col-auto">
+          <div class="card card-technology">
+            <img class="card-technology-logos" data-src="assets/img/logos/spring.svg" alt="Spring Logo">
+            <p class="technology-logos-text">Spring</p>
           </div>
         </div>
       </div>
@@ -380,33 +386,34 @@
     <div class="container">
       <h2 class="header-text-2">EDUCATION</h2>
 
+      <h4 class="display-3 display-3-header ">Academic Studies</h4>
       <!-- Master -->
-      <div class="card card-body education-card mb-4">
-          <div class="row">
-            <div class="col-12 col-lg-3 text-center col-education-logo">
-              <img class="img-fluid education-logo" data-src="assets/img/misc/wwu_logo.png" alt="WWU Logo">
-            </div>
-            <div class="col-12 col-lg-9">
-                <h4>Westfälische Wilhelms-Universität Münster</h4>
-                <h5>Master of Science, Computer Science (2015-)</h5>
-                <hr>
-                <ul>
-                  <li>Parallel Systems</li>
-                  <li>Compiler</li>
-                  <li>Theory of Programming</li>
-                  <li>Multithreading and Networking in Java</li>
-                  <li>Parallel Programming</li>
-                  <li>Computer Vision</li>
-                  <li>Advanced Database Concepts</li>
-                  <li class="mt-4">Project: Auto-Tuning of stencil calculations on modern many-core systems</li>
-                  <li>Seminar Biomedical Informatics: Sprites - Detection of deletions from sequencing data by re-aligning split reads</li>
-                </ul>
-            </div>
+      <div class="card card-body education-card mb-4 mt-4">
+        <div class="row">
+          <div class="col-12 col-lg-3 text-center col-education-logo">
+            <img class="img-fluid education-logo" data-src="assets/img/misc/wwu_logo.png" alt="WWU Logo">
+          </div>
+          <div class="col-12 col-lg-9">
+              <h4>Westfälische Wilhelms-Universität Münster</h4>
+              <h5>Master of Science, Computer Science (2015-)</h5>
+              <hr>
+              <ul>
+                <li>Parallel Systems</li>
+                <li>Compiler</li>
+                <li>Theory of Programming</li>
+                <li>Multithreading and Networking in Java</li>
+                <li>Parallel Programming</li>
+                <li>Computer Vision</li>
+                <li>Advanced Database Concepts</li>
+                <li class="mt-4">Project: Auto-Tuning of stencil calculations on modern many-core systems</li>
+                <li>Seminar Biomedical Informatics: Sprites - Detection of deletions from sequencing data by re-aligning split reads</li>
+              </ul>
           </div>
         </div>
+      </div>
 
       <!-- Bachelor -->
-      <div class="card card-body education-card">
+      <div class="card card-body education-card mb-5">
         <div class="row">
           <div class="col-12 col-lg-3 text-center col-education-logo">
             <img class="img-fluid education-logo" data-src="assets/img/misc/wwu_logo.png" alt="WWU Logo">
@@ -429,6 +436,36 @@
         </div>
       </div>
 
+      <!-- CERTIFICATES -->
+      <h4 class="display-3 display-3-header mb-4">Certificates</h4>
+
+      <!-- Modern JavaScript From The Beginning -->
+      <div class="card card-body education-card mb-4">
+        <div class="row">
+          <div class="col-12 col-lg-3 text-center col-education-logo">
+            <img class="img-fluid certificate-logo p-3" data-src="assets/img/misc/udemy.svg" alt="Udemy Logo">
+          </div>
+          <div class="col-12 col-lg-9">
+              <h4>Modern JavaScript From The Beginning (Udemy)</h4>
+              <h6>Duration: 21.5 hours</h6>
+              <h6>License: <a href="https://www.udemy.com/certificate/UC-NW6Y09X8/">UC-NW6Y09X8</a></h6>
+          </div>
+        </div>
+      </div>
+
+      <!-- Web Developer in 2018: Zero to Mastery -->
+      <div class="card card-body education-card mb-4">
+        <div class="row">
+          <div class="col-12 col-lg-3 text-center col-education-logo">
+            <img class="img-fluid certificate-logo p-3" data-src="assets/img/misc/udemy.svg" alt="Udemy Logo">
+          </div>
+          <div class="col-12 col-lg-9">
+              <h4>The Complete Web Developer in 2018: Zero to Mastery (Udemy)</h4>
+              <h6>Duration: 29.5 hours</h6>
+              <h6>License: <a href="https://www.udemy.com/certificate/UC-5VRHK833/">UC-5VRHK833</a></h6>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -484,7 +521,7 @@
   </footer>
 
   <!-- Bootstrap needs to define these scripts here -->
-  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
@@ -492,8 +529,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js" integrity="sha256-Y1rRlwTzT5K5hhCBfAFWABD4cU13QGuRN6P5apfWzVs=" crossorigin="anonymous"></script>
 
   <!-- Font Awesome -->
-  <script src="https://use.fontawesome.com/releases/v5.0.9/js/brands.js" integrity="sha384-qJKAzpOXfvmSjzbmsEtlYziSrpVjh5ROPNqb8UZ60myWy7rjTObnarseSKotmJIx" crossorigin="anonymous"></script>
-  <script src="https://use.fontawesome.com/releases/v5.0.9/js/fontawesome.js" integrity="sha384-2IUdwouOFWauLdwTuAyHeMMRFfeyy4vqYNjodih+28v2ReC+8j+sLF9cK339k5hY" crossorigin="anonymous"></script>
+  <script async src="https://use.fontawesome.com/releases/v5.0.9/js/brands.js" integrity="sha384-qJKAzpOXfvmSjzbmsEtlYziSrpVjh5ROPNqb8UZ60myWy7rjTObnarseSKotmJIx" crossorigin="anonymous"></script>
+  <script async src="https://use.fontawesome.com/releases/v5.0.9/js/fontawesome.js" integrity="sha384-2IUdwouOFWauLdwTuAyHeMMRFfeyy4vqYNjodih+28v2ReC+8j+sLF9cK339k5hY" crossorigin="anonymous"></script>
 
   <script src="js/index.js"></script>
 </body>
