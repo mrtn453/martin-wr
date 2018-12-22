@@ -19,7 +19,9 @@
   <!-- Ekko Lightbox -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" integrity="sha256-HAaDW5o2+LelybUhfuk0Zh2Vdk8Y2W2UeKmbaXhalfA=" crossorigin="anonymous" />
 
+  <!-- Styles -->
   <link rel="stylesheet" href="css/style.css" />
+
   <title>Martin Wrodarczyk</title>
 </head>
 
@@ -47,7 +49,6 @@
   </nav>
 
   <!-- HOME -->
-
   <header id="home" class="sector-2">
     <div class="container mx-auto jumbotron home-card">
     <div class="row my-auto justify-content-center text-center">
@@ -289,6 +290,12 @@
           </div>
         </div>
         <div class="col-auto">
+            <div class="card card-technology">
+              <img class="card-technology-logos" data-src="assets/img/logos/python.svg" alt="Python Logo">
+              <p class="technology-logos-text">Python</p>
+            </div>
+          </div>
+        <div class="col-auto">
           <div class="card card-technology">
             <img class="card-technology-logos" data-src="assets/img/logos/javascript.svg" alt="Javascript Logo">
             <p class="technology-logos-text">Javascript</p>
@@ -312,27 +319,27 @@
       <h4 class="display-3 display-3-header">Frameworks</h4>
       <div class="row technology-row">
         <div class="col-auto">
-          <div class="card card-technology">
-            <img class="card-technology-logos" data-src="assets/img/logos/react.svg" alt="React Logo">
-            <p class="technology-logos-text">React</p>
+            <div class="card card-technology">
+              <img class="card-technology-logos" data-src="assets/img/logos/opencl.png" alt="OpenCL Logo">
+              <p class="technology-logos-text">OpenCL</p>
+            </div>
           </div>
-        </div>
         <div class="col-auto">
           <div class="card card-technology">
             <img class="card-technology-logos" data-src="assets/img/logos/bootstrap.svg" alt="Bootstrap logo">
             <p class="technology-logos-text">Bootstrap 4</p>
           </div>
-        </div>
-        <div class="col-auto">
-          <div class="card card-technology">
-            <img class="card-technology-logos" data-src="assets/img/logos/opencl.png" alt="OpenCL Logo">
-            <p class="technology-logos-text">OpenCL</p>
-          </div>
-        </div>
+        </div>        
         <div class="col-auto">
           <div class="card card-technology">
             <img class="card-technology-logos" data-src="assets/img/logos/spring.svg" alt="Spring Logo">
             <p class="technology-logos-text">Spring</p>
+          </div>
+        </div>
+        <div class="col-auto">
+          <div class="card card-technology">
+            <img class="card-technology-logos" data-src="assets/img/logos/react.svg" alt="React Logo">
+            <p class="technology-logos-text">React</p>
           </div>
         </div>
       </div>
@@ -348,10 +355,16 @@
         </div>
         <div class="col-auto">
           <div class="card card-technology">
-            <img class="card-technology-logos" data-src="assets/img/logos/intellij.svg" alt="IntelliJ Studio Logo">
+            <img class="card-technology-logos" data-src="assets/img/logos/intellij.svg" alt="IntelliJ Logo">
             <p class="technology-logos-text">IntelliJ</p>
           </div>
         </div>
+        <div class="col-auto">
+            <div class="card card-technology">
+              <img class="card-technology-logos" data-src="assets/img/logos/eclipse.svg" alt="Eclipse Logo">
+              <p class="technology-logos-text">Eclipse</p>
+            </div>
+          </div>
         <div class="col-auto">
           <div class="card card-technology">
             <img class="card-technology-logos" data-src="assets/img/logos/visualstudio.svg" alt="Visual Studio Code Logo">
@@ -439,33 +452,83 @@
       <!-- CERTIFICATES -->
       <h4 class="display-3 display-3-header mb-4">Certificates</h4>
 
-      <!-- Modern JavaScript From The Beginning -->
+      <!-- Spring Pluralsight -->
       <div class="card card-body education-card mb-4">
         <div class="row">
           <div class="col-12 col-lg-3 text-center col-education-logo">
-            <img class="img-fluid certificate-logo p-3" data-src="assets/img/misc/udemy.svg" alt="Udemy Logo">
+            <img class="img-fluid certificate-logo-ps" data-src="assets/img/logos/pluralsight.png" alt="Pluralsight Logo">
           </div>
           <div class="col-12 col-lg-9">
-              <h4>Modern JavaScript From The Beginning (Udemy)</h4>
-              <h6>Duration: 21.5 hours</h6>
-              <h6>License: <a href="https://www.udemy.com/certificate/UC-NW6Y09X8/">UC-NW6Y09X8</a></h6>
+              <h4>Spring</h4>
+              <ul>
+                <li>Spring: The Big Picture (Duration: 1 h 15 min) - <a href="assets/docs/certificate-spring-the-big-picture.pdf">Certificate</a></li>
+                <li>Spring Fundamentals (Duration: 2 h 55 min) - <a href="assets/docs/certificate-spring-fundamentals.pdf">Certificate</a></li>
+              </ul>
           </div>
         </div>
       </div>
+
+      <!-- Python Pluralsight -->
+      <div class="card card-body education-card mb-4">
+        <div class="row">
+          <div class="col-12 col-lg-3 text-center col-education-logo">
+            <img class="img-fluid certificate-logo-ps" data-src="assets/img/logos/pluralsight.png" alt="Pluralsight Logo">
+          </div>
+          <div class="col-12 col-lg-9">
+              <h4>Python</h4>
+              <ul>
+                <li>Python: The Big Picture (Duration: 1 h 5 min) - <a href="assets/docs/certificate-python-the-big-picture.pdf">Certificate</a></li>
+                <li>Python: Getting Started (Duration: 2 h 59 min) - <a href="assets/docs/certificate-python-getting-started.pdf">Certificate</a></li>
+                <li>Python Fundamentals (Duration: 5 h 11 min) - <a href="assets/docs/certificate-python-fundamentals.pdf">Certificate</a></li>
+              </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Java EE Pluralsight -->
+      <div class="card card-body education-card mb-4">
+          <div class="row">
+            <div class="col-12 col-lg-3 text-center col-education-logo">
+              <img class="img-fluid certificate-logo-ps" data-src="assets/img/logos/pluralsight.png" alt="Pluralsight Logo">
+            </div>
+            <div class="col-12 col-lg-9">
+                <h4>Java EE</h4>
+                <ul>
+                  <li>Java EE: The Big Picture (Duration: 1 h 9 min) - <a href="assets/docs/certificate-java-ee-the-big-picture.pdf">Certificate</a></li>
+                  <li>Java EE: Getting Started (Duration: 5 h) - <a href="assets/docs/certificate-java-ee-getting-started.pdf">Certificate</a></li>
+                </ul>
+            </div>
+          </div>
+        </div>
 
       <!-- Web Developer in 2018: Zero to Mastery -->
       <div class="card card-body education-card mb-4">
         <div class="row">
           <div class="col-12 col-lg-3 text-center col-education-logo">
-            <img class="img-fluid certificate-logo p-3" data-src="assets/img/misc/udemy.svg" alt="Udemy Logo">
+            <img class="img-fluid certificate-logo" data-src="assets/img/logos/udemy.svg" alt="Udemy Logo">
           </div>
           <div class="col-12 col-lg-9">
               <h4>The Complete Web Developer in 2018: Zero to Mastery (Udemy)</h4>
               <h6>Duration: 29.5 hours</h6>
-              <h6>License: <a href="https://www.udemy.com/certificate/UC-5VRHK833/">UC-5VRHK833</a></h6>
+              <h6>Certificate: <a href="https://www.udemy.com/certificate/UC-5VRHK833/">UC-5VRHK833</a></h6>
           </div>
         </div>
       </div>
+
+          <!-- Modern JavaScript From The Beginning -->
+      <div class="card card-body education-card mb-4">
+        <div class="row">
+          <div class="col-12 col-lg-3 text-center col-education-logo">
+            <img class="img-fluid certificate-logo" data-src="assets/img/logos/udemy.svg" alt="Udemy Logo">
+          </div>
+          <div class="col-12 col-lg-9">
+              <h4>Modern JavaScript From The Beginning (Udemy)</h4>
+              <h6>Duration: 21.5 hours</h6>
+              <h6>Certificate: <a href="https://www.udemy.com/certificate/UC-NW6Y09X8/">UC-NW6Y09X8</a></h6>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
