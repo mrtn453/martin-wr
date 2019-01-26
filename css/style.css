@@ -522,6 +522,22 @@ footer {
 }
 
 @media (max-width: 767px) {
+  .vtimeline-content {
+    margin-left: 15px;
+  }
+
+  #experience-timeline::after {
+    display: none;
+  }
+
+  .vtimeline-icon {
+    display: none;
+  }
+
+  .vtimeline-date {
+    top: -35px;
+  }
+  
   .display-3-header {
     font-size: 26px;
   }
